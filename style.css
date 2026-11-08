@@ -1,0 +1,552 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #0b1020;
+  --panel: #141d31;
+  --text: #f6f8fc;
+  --muted: #a8b4c9;
+  --accent: #b5f35b;
+  --line: #29344b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Manrope, Arial, sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ШАПКА САЙТУ */
+
+.site-header {
+  height: 78px;
+  padding: 0 max(5vw, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  background: rgba(11, 16, 32, .95);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand span:not(.brand-mark),
+.footer-accent {
+  color: var(--accent);
+}
+
+.brand-mark {
+  color: var(--accent);
+  margin-right: 8px;
+}
+
+/* НАВІГАЦІЯ */
+
+.nav {
+  display: flex;
+  gap: 9px;
+}
+
+.nav a {
+  padding: 9px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  transition: .2s;
+}
+
+.nav a:hover,
+.nav a.active {
+  background: #26354b;
+  color: var(--accent);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 25px;
+}
+
+/* СТОРІНКИ */
+
+.page {
+  display: none;
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 25px 70px;
+}
+
+.page.active {
+  display: block;
+}
+
+/* ГОЛОВНИЙ БАНЕР */
+
+.hero {
+  min-height: 530px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 70px 25px 55px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 80% 48%,
+    #263c43 0,
+    transparent 53%
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  font-size: 11px;
+}
+
+.hero h1 {
+  font-size: clamp(43px, 6vw, 80px);
+  line-height: 1.13;
+  letter-spacing: -3px;
+  margin: 22px 0;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.hero p {
+  max-width: 540px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* КНОПКА */
+
+.button {
+  display: inline-flex;
+  gap: 30px;
+  align-items: center;
+  background: var(--accent);
+  color: #122019;
+  padding: 15px 23px;
+  border-radius: 9px;
+  font-weight: 800;
+  margin-top: 22px;
+  transition: .2s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  background: #d2ff88;
+}
+
+/* СПОРТИВНІ СИМВОЛИ */
+
+.hero-visual {
+  height: 360px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-visual span {
+  font-size: 140px;
+  filter: drop-shadow(0 20px 30px #0008);
+  position: absolute;
+}
+
+.hero-visual span:nth-child(1) {
+  transform: translate(-90px, -35px) rotate(-18deg);
+}
+
+.hero-visual span:nth-child(2) {
+  font-size: 120px;
+  transform: translate(105px, -80px) rotate(20deg);
+}
+
+.hero-visual span:nth-child(3) {
+  font-size: 110px;
+  transform: translate(80px, 100px) rotate(12deg);
+}
+
+/* ЗАГОЛОВОК КАРТОК */
+
+.section-heading {
+  text-align: center;
+  margin: 5px auto 35px;
+}
+
+.section-heading h2 {
+  font-size: clamp(29px, 4vw, 42px);
+  letter-spacing: -1.5px;
+  margin: 8px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* КАРТКИ СПОРТУ */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.sport-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  overflow: hidden;
+  background: var(--panel);
+  transition: transform .25s, border-color .25s;
+}
+
+.sport-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+}
+
+.card-art {
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 105px;
+  text-shadow: 0 12px 30px #0007;
+}
+
+.football-card .card-art {
+  background: radial-gradient(
+    circle at 55% 40%,
+    #2d8061,
+    #0b3c36
+  );
+}
+
+.hockey-card .card-art {
+  background: radial-gradient(
+    circle at 55% 40%,
+    #5a9fc2,
+    #193d6e
+  );
+}
+
+.tennis-card .card-art {
+  background: radial-gradient(
+    circle at 55% 40%,
+    #9cba49,
+    #38542a
+  );
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-number {
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.card-body h3 {
+  font-size: 29px;
+  margin: 8px 0;
+}
+
+.card-body p {
+  color: var(--muted);
+  font-size: 13px;
+  min-height: 65px;
+}
+
+.card-link {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.bottom-note {
+  text-align: center;
+  color: #64738d;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin: 70px 0 10px;
+  font-weight: 800;
+}
+
+/* СТОРІНКИ ФУТБОЛУ, ХОКЕЮ І ТЕНІСУ */
+
+.detail-page {
+  padding-top: 35px;
+}
+
+.back-link {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.detail-hero {
+  margin-top: 22px;
+  min-height: 300px;
+  border-radius: 18px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-hero h1 {
+  font-size: clamp(50px, 8vw, 90px);
+  letter-spacing: -3px;
+  line-height: 1.1;
+  margin: 12px 0;
+}
+
+.detail-hero h1 span {
+  font-size: .65em;
+}
+
+.detail-hero p {
+  max-width: 520px;
+  font-size: 17px;
+}
+
+/* КОЛЬОРИ СПОРТИВНИХ СТОРІНОК */
+
+.football-theme {
+  background: radial-gradient(
+    circle at 80% 50%,
+    #337e5d,
+    #123c35 65%,
+    #102b2a
+  );
+}
+
+.hockey-theme {
+  background: radial-gradient(
+    circle at 80% 50%,
+    #477ba7,
+    #1d3c68 65%,
+    #142744
+  );
+}
+
+.tennis-theme {
+  background: radial-gradient(
+    circle at 80% 50%,
+    #728d3c,
+    #354d28 65%,
+    #24351e
+  );
+}
+
+/* ІНФОРМАЦІЙНІ БЛОКИ */
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 24px 0 45px;
+}
+
+.facts div {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 24px;
+  background: var(--panel);
+}
+
+.facts strong {
+  display: block;
+  color: var(--accent);
+  font-size: 25px;
+}
+
+.facts span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* ТЕКСТ ПРАВИЛ */
+
+.content {
+  max-width: 850px;
+  margin: auto;
+  color: #d8e1ef;
+}
+
+.content h2 {
+  color: white;
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+.content p {
+  margin: 18px 0;
+}
+
+.content ol {
+  padding-left: 25px;
+}
+
+.content li {
+  padding-left: 6px;
+  margin: 17px 0;
+}
+
+.content strong {
+  color: white;
+}
+
+/* НИЖНЯ ЧАСТИНА САЙТУ */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 25px max(5vw, 20px);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+footer > span:first-child {
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* АДАПТАЦІЯ ДЛЯ ТЕЛЕФОНІВ */
+
+@media (max-width: 850px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 55px 0;
+  }
+
+  .hero-visual {
+    height: 180px;
+  }
+
+  .hero-visual span {
+    font-size: 90px;
+  }
+
+  .hero-visual span:nth-child(1) {
+    transform: translate(-90px, -10px);
+  }
+
+  .hero-visual span:nth-child(2) {
+    font-size: 75px;
+    transform: translate(30px, -30px);
+  }
+
+  .hero-visual span:nth-child(3) {
+    font-size: 70px;
+    transform: translate(100px, 30px);
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card-art {
+    height: 190px;
+  }
+
+  .card-body p {
+    min-height: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 77px;
+    left: 0;
+    right: 0;
+    background: #111a2b;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .facts {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-hero {
+    padding: 35px 25px;
+    min-height: 240px;
+  }
+
+  footer {
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+}

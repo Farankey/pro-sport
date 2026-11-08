@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Про спорт: правила футболу, хокею та тенісу.">
+
+  <title>Про спорт — Футбол, хокей, теніс</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="#home" class="brand" data-page="home">
+      <span class="brand-mark">✦</span>
+      ПРО<span>СПОРТ</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Відкрити меню" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav" aria-label="Основна навігація">
+      <a href="#home" data-page="home" class="active">Головна</a>
+      <a href="#football" data-page="football">Футбол</a>
+      <a href="#hockey" data-page="hockey">Хокей</a>
+      <a href="#tennis" data-page="tennis">Теніс</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ГОЛОВНА СТОРІНКА -->
+    <section id="home" class="page active" aria-labelledby="home-title">
+
+      <div class="hero">
+        <div class="hero-content">
+          <div class="eyebrow">РУХАЙСЯ • ГРАЙ • ПЕРЕМАГАЙ</div>
+
+          <h1 id="home-title">
+            Світ спорту<br>
+            <em>починається тут.</em>
+          </h1>
+
+          <p>
+            Три захопливі види спорту. Три різні історії.
+            Дізнайся про основні правила футболу, хокею
+            та тенісу — просто й цікаво.
+          </p>
+
+          <a class="button" href="#sports">
+            Обрати вид спорту <span>↗</span>
+          </a>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <span>⚽</span>
+          <span>🏒</span>
+          <span>🎾</span>
+        </div>
+      </div>
+
+      <div id="sports" class="section-heading">
+        <span class="eyebrow">ОБИРАЙ СВОЮ ГРУ</span>
+        <h2>Популярні види спорту</h2>
+        <p>Натисни на картку, щоб переглянути правила.</p>
+      </div>
+
+      <div class="cards">
+
+        <!-- ФУТБОЛ -->
+        <a class="sport-card football-card" href="#football" data-page="football">
+          <div class="card-art" aria-hidden="true">⚽</div>
+
+          <div class="card-body">
+            <span class="card-number">01 / КОМАНДНИЙ СПОРТ</span>
+            <h3>Футбол</h3>
+            <p>
+              Командна гра, у якій важливі точність,
+              швидкість і взаємодія.
+            </p>
+            <span class="card-link">Дізнатися правила ↗</span>
+          </div>
+        </a>
+
+        <!-- ХОКЕЙ -->
+        <a class="sport-card hockey-card" href="#hockey" data-page="hockey">
+          <div class="card-art" aria-hidden="true">🏒</div>
+
+          <div class="card-body">
+            <span class="card-number">02 / КОМАНДНИЙ СПОРТ</span>
+            <h3>Хокей</h3>
+            <p>
+              Динамічна гра на льоду із шайбою,
+              ключками та воротами.
+            </p>
+            <span class="card-link">Дізнатися правила ↗</span>
+          </div>
+        </a>
+
+        <!-- ТЕНІС -->
+        <a class="sport-card tennis-card" href="#tennis" data-page="tennis">
+          <div class="card-art" aria-hidden="true">🎾</div>
+
+          <div class="card-body">
+            <span class="card-number">03 / РАКЕТКОВИЙ СПОРТ</span>
+            <h3>Теніс</h3>
+            <p>
+              Гра на корті, де вирішальними є
+              техніка, реакція та витримка.
+            </p>
+            <span class="card-link">Дізнатися правила ↗</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="bottom-note">
+        СПОРТ — ЦЕ БІЛЬШЕ, НІЖ ГРА. ЦЕ ХАРАКТЕР.
+      </div>
+    </section>
+
+    <!-- СТОРІНКА ФУТБОЛУ -->
+    <section id="football" class="page detail-page" aria-labelledby="football-title">
+
+      <a href="#home" class="back-link" data-page="home">← На головну</a>
+
+      <div class="detail-hero football-theme">
+        <div>
+          <span class="eyebrow">01 / КОМАНДНИЙ СПОРТ</span>
+          <h1 id="football-title">Футбол <span>⚽</span></h1>
+          <p>Одна з найпопулярніших командних ігор у світі.</p>
+        </div>
+      </div>
+
+      <div class="facts">
+        <div><strong>11</strong><span>гравців у команді</span></div>
+        <div><strong>90 хв</strong><span>основний час</span></div>
+        <div><strong>2</strong><span>тайми</span></div>
+      </div>
+
+      <div class="content">
+        <h2>Основні правила футболу</h2>
+
+        <p>
+          У футбол грають дві команди, зазвичай по 11 гравців,
+          включно з воротарем. Мета гри — забити більше голів
+          у ворота суперника, ніж він заб'є у ваші.
+        </p>
+
+        <ol>
+          <li>
+            <strong>Тривалість матчу.</strong>
+            Основний час складається з двох таймів по 45 хвилин
+            із перервою між ними. Суддя може додати компенсований час.
+          </li>
+
+          <li>
+            <strong>Гра м'ячем.</strong>
+            Польові гравці не можуть навмисно грати рукою або
+            передпліччям. Воротар має особливі права грати руками
+            у власному штрафному майданчику з певними обмеженнями.
+          </li>
+
+          <li>
+            <strong>Гол.</strong>
+            Гол зараховується, коли весь м'яч перетнув лінію воріт
+            між стійками та під поперечиною і команда не порушила правила.
+          </li>
+
+          <li>
+            <strong>Поза грою.</strong>
+            Гравець може бути покараний за офсайд, якщо в момент
+            передачі від партнера перебуває в положенні «поза грою»
+            та активно бере участь в епізоді.
+          </li>
+
+          <li>
+            <strong>Порушення.</strong>
+            За небезпечні підкати, поштовхи, гру рукою та інші
+            порушення призначають штрафні або вільні удари,
+            а за певні порушення у штрафному майданчику — пенальті.
+          </li>
+
+          <li>
+            <strong>Картки.</strong>
+            Жовта картка означає попередження,
+            червона — вилучення з поля.
+          </li>
+        </ol>
+
+        <p>
+          Перемагає команда, яка забила більше голів.
+          У деяких турнірах за нічийного результату можуть
+          призначати додатковий час і серію пенальті.
+        </p>
+      </div>
+    </section>
+
+    <!-- СТОРІНКА ХОКЕЮ -->
+    <section id="hockey" class="page detail-page" aria-labelledby="hockey-title">
+
+      <a href="#home" class="back-link" data-page="home">← На головну</a>
+
+      <div class="detail-hero hockey-theme">
+        <div>
+          <span class="eyebrow">02 / КОМАНДНИЙ СПОРТ</span>
+          <h1 id="hockey-title">Хокей <span>🏒</span></h1>
+          <p>Швидкість, командна робота та боротьба за шайбу на льоду.</p>
+        </div>
+      </div>
+
+      <div class="facts">
+        <div><strong>6</strong><span>гравців на льоду зазвичай</span></div>
+        <div><strong>60 хв</strong><span>основний час</span></div>
+        <div><strong>3</strong><span>періоди</span></div>
+      </div>
+
+      <div class="content">
+        <h2>Основні правила хокею із шайбою</h2>
+
+        <p>
+          У хокей із шайбою грають дві команди.
+          Зазвичай від кожної команди одночасно на льоду
+          перебувають п'ять польових гравців і воротар.
+          Мета — закинути шайбу у ворота суперника.
+        </p>
+
+        <ol>
+          <li>
+            <strong>Тривалість гри.</strong>
+            Матч складається з трьох періодів по 20 хвилин
+            чистого ігрового часу.
+          </li>
+
+          <li>
+            <strong>Рух шайби.</strong>
+            Гравці пересуваються на ковзанах і передають
+            або спрямовують шайбу ключками.
+          </li>
+
+          <li>
+            <strong>Гол.</strong>
+            Гол зараховується, коли шайба повністю перетинає
+            лінію воріт відповідно до правил.
+          </li>
+
+          <li>
+            <strong>Положення поза грою.</strong>
+            Під час входу в зону атаки діє правило офсайду:
+            атакувальні гравці не повинні випереджати шайбу
+            за синю лінію за умов, визначених правилами.
+          </li>
+
+          <li>
+            <strong>Проброс.</strong>
+            За певних умов порушенням є спрямування шайби
+            зі своєї половини майданчика за лінію воріт
+            суперника без належного торкання.
+          </li>
+
+          <li>
+            <strong>Штрафи.</strong>
+            За підніжки, затримки, удари ключкою та інші
+            порушення гравець може отримати штрафний час,
+            протягом якого його команда часто грає в меншості.
+          </li>
+        </ol>
+
+        <p>
+          Перемагає команда з більшою кількістю голів.
+          Правила овертайму та булітів залежать від змагання.
+        </p>
+      </div>
+    </section>
+
+    <!-- СТОРІНКА ТЕНІСУ -->
+    <section id="tennis" class="page detail-page" aria-labelledby="tennis-title">
+
+      <a href="#home" class="back-link" data-page="home">← На головну</a>
+
+      <div class="detail-hero tennis-theme">
+        <div>
+          <span class="eyebrow">03 / РАКЕТКОВИЙ СПОРТ</span>
+          <h1 id="tennis-title">Теніс <span>🎾</span></h1>
+          <p>Точність ударів, тактика та швидка реакція.</p>
+        </div>
+      </div>
+
+      <div class="facts">
+        <div><strong>1 × 1</strong><span>одиночна гра</span></div>
+        <div><strong>2 × 2</strong><span>парна гра</span></div>
+        <div><strong>15–30–40</strong><span>рахунок у геймі</span></div>
+      </div>
+
+      <div class="content">
+        <h2>Основні правила тенісу</h2>
+
+        <p>
+          У теніс грають двоє суперників (одиночний розряд)
+          або дві пари (парний розряд).
+          Гравці перекидають м'яч ракетками через сітку,
+          намагаючись виграти розіграш.
+        </p>
+
+        <ol>
+          <li>
+            <strong>Подача.</strong>
+            Розіграш починається з подачі по діагоналі
+            у відповідне поле подачі.
+            Зазвичай гравець має дві спроби виконати правильну подачу.
+          </li>
+
+          <li>
+            <strong>Розіграш.</strong>
+            М'яч можна відбити до того, як він двічі
+            торкнеться корту на твоєму боці.
+            Удар має спрямувати м'яч у межі корту суперника.
+          </li>
+
+          <li>
+            <strong>Рахунок.</strong>
+            Очки в геймі рахують як 15, 30, 40 та виграш гейму.
+            За рахунку 40:40 («рівно») за стандартними правилами
+            потрібна перевага у два очки.
+          </li>
+
+          <li>
+            <strong>Сети.</strong>
+            Зазвичай для перемоги в сеті потрібно виграти
+            щонайменше шість геймів із перевагою у два.
+            За рахунку 6:6 часто грають тай-брейк.
+          </li>
+
+          <li>
+            <strong>Матч.</strong>
+            Залежно від турніру матч може проходити
+            до перемоги у двох або трьох сетах.
+          </li>
+
+          <li>
+            <strong>Помилки.</strong>
+            Очко програється, зокрема, якщо м'яч влучає
+            за межі корту, не перелітає сітку або гравець
+            допускає подвійну помилку на подачі.
+          </li>
+        </ol>
+
+        <p>
+          Теніс розвиває координацію, витривалість
+          і здатність швидко ухвалювати рішення.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>✦ ПРО<span class="footer-accent">СПОРТ</span></span>
+    <span>Навчальний сайт • Футбол • Хокей • Теніс</span>
+    <span>© 2026</span>
+  </footer>
+
+</body>
+</html>
